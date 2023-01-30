@@ -1,7 +1,6 @@
-# Express-Basic-Setup
+# Welcome to my public lib!
 
-This section contains all the code to the express-basic-setup tutorial. The aim of this tutorial is to set up a basic express project starter with typescript.
+This is the github repository to my gitbook, where I gather all of my knowledge in one place. It is a collection of tutorials, experiences, and insights on the technologies I use.
 
-Follow the link below for the full tutorial:
-
-https://lwimhofer.gitbook.io/public-lib/tutorials/setups/express/express-basic-setup
+Follow the link below and check it out:
+https://lwimhofer.gitbook.io/public-lib/overview/welcome-to-my-public-lib
