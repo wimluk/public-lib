@@ -29,7 +29,7 @@
         "@exceptions/*": ["exceptions/*"],
         "@interfaces/*": ["interfaces/*"],
         "@middlewares/*": ["middlewares/*"],
-        "@routes/*": ["routes/*"],
+        "@routers/*": ["routers/*"],
         "@services/*": ["services/*"],
         "@utils/*": ["utils/*"]
       }
