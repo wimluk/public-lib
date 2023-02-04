@@ -1,6 +1,6 @@
 # Welcome to my public lib!
 
-This is the github repository to my gitbook, where I gather my knowledge in one place. It is a collection of tutorials, experiences, and insights on the technologies I use and topics I face.
+This is the github repository to my gitbook, where I share my collection of tutorials, experiences, and insights on the technologies I use and projects I am working on.
 
 Follow the link below and check it out:
 
