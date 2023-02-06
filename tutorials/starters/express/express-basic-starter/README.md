@@ -1,7 +1,6 @@
 # Express-Basic-Setup
 
-This section contains all the code to the express-basic-setup tutorial. The aim of this tutorial is to set up a basic express project starter with typescript.
+This is the repo to the first part of the series “API development with nodejs, express and typescript from scratch” and it is all about starting the project.
 
-Follow the link below for the full tutorial:
-
-https://lwimhofer.gitbook.io/public-lib/tutorials/setups/express/express-basic-setup
+Follow along on medium:
+https://medium.com/@wimluk/api-development-with-nodejs-express-and-typescript-from-scratch-project-starter-85caf1508807

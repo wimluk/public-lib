@@ -7,9 +7,9 @@ import helmet from 'helmet';
 
 import validateEnv from '@/utils/validateEnv';
 
-dotenv.config();
-
 // App Variables
+
+dotenv.config();
 
 validateEnv();
 

@@ -9,10 +9,11 @@ import validateEnv from '@/utils/validateEnv';
 import router from '@/routers/routes';
 import usersRouter from './routers/users.routes';
 
-dotenv.config();
-validateEnv();
-
 // App Variables
+
+dotenv.config();
+
+validateEnv();
 
 const port = process.env.PORT;
 

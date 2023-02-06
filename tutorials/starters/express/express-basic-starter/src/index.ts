@@ -5,9 +5,9 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 
-dotenv.config();
-
 // App Variables
+
+dotenv.config();
 
 const port = process.env.PORT;
 
@@ -19,12 +19,12 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 // Server Activation
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-  });
+  console.log(`Listening on port ${port}`);
+});
