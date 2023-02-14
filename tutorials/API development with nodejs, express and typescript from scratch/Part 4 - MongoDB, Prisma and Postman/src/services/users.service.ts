@@ -23,18 +23,6 @@ class UsersService {
     }
   };
 
-  public getUserByEmail = async (email: string): Promise<User | null> => {
-    try {
-      return await this.users.findUnique({
-        where: {
-          email,
-        },
-      });
-    } catch (e) {
-      throw new Error(e);
-    }
-  };
-
   public createUser = async (data: User): Promise<User> => {
     try {
       return await this.users.create({

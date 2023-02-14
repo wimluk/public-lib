@@ -24,16 +24,6 @@ class UsersController {
     }
   };
 
-  public getUserByEmail = async (req: Request, res: Response): Promise<void> => {
-    try {
-      const { email } = req.params;
-      const user: User | null = await this.usersService.getUserByEmail(email);
-      res.status(200).json({ user });
-    } catch (e) {
-      res.status(500).json({ error: e.message });
-    }
-  };
-
   public createUser = async (req: Request, res: Response): Promise<void> => {
     try {
       const user: User = req.body;
