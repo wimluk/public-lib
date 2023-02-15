@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  mongo1:
+    container_name: mongodb-cluster-1
+    image: mongo:latest
+    command: mongod --replSet mongodb-cluster
+    ports:
+      - '30001:27017'
+    volumes:
+      - ./mongodb-cluster/mongodb-cluster-1:/data/db
+    networks:
+      - mongodb-cluster
+
+  mongo2:
+    container_name: mongodb-cluster-2
+    image: mongo:latest
+    command: mongod --replSet mongodb-cluster
+    ports:
+      - '30002:27017'
+    depends_on:
+      - mongo1
+    volumes:
+      - ./mongodb-cluster/mongodb-cluster-2:/data/db
+    networks:
+      - mongodb-cluster
+
+  mongo3:
+    container_name: mongodb-cluster-3
+    image: mongo:latest
+    command: mongod --replSet mongodb-cluster
+    ports:
+      - '30003:27017'
+    depends_on:
+      - mongo2
+    volumes:
+      - ./mongodb-cluster/mongodb-cluster-3:/data/db
+    networks:
+      - mongodb-cluster
+
+networks:
+  mongodb-cluster:
