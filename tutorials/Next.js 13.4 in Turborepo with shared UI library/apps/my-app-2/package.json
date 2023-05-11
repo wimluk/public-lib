@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "ui": "*"
+    "ui": "*",
+    "tailwindconfig": "*"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "tsconfig": "*",
-    "tailwindconfig": "*"
+    "tsconfig": "*"
   }
 }
