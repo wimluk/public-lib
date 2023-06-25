@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { FileText } from "lucide-react";
 import { usePathname } from "next/navigation";
 import DocumentOperations from "./document-operations";
+import Link from "next/link";
 
 export default function DocumentCard({ document }: { document: DocumentType }) {
   const pathname = usePathname();
@@ -18,7 +19,7 @@ export default function DocumentCard({ document }: { document: DocumentType }) {
         pathname === `/app/${document.publicId}` && "bg-secondary"
       )}
     >
-      <a
+      <Link
         className="flex w-full items-center"
         href={`/app/${document.publicId}`}
       >
@@ -26,7 +27,7 @@ export default function DocumentCard({ document }: { document: DocumentType }) {
         <div className="w-52 overflow-hidden truncate text-ellipsis whitespace-nowrap">
           {document.title}
         </div>
-      </a>
+      </Link>
       <DocumentOperations publicId={document.publicId} title={document.title} />
     </div>
   );

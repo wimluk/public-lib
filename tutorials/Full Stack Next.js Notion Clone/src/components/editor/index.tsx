@@ -1,7 +1,8 @@
 "use client";
 
 import { useEditor, EditorContent } from "@tiptap/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { TipTapEditorExtensions } from "./extensions";
 import { TipTapEditorProps } from "./props";
 import { PatchDocType } from "@/app/api/documents/[publicId]/route";
@@ -14,6 +15,8 @@ export default function Editor({
   document: PatchDocType;
   publicId: string;
 }) {
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<string>("Saved");
   const [hydrated, setHydrated] = useState<boolean>(false);
   const [content, setContent] = useState<PatchDocType["document"]>();
@@ -36,6 +39,10 @@ export default function Editor({
       }
 
       setSaveStatus("Saved");
+      startTransition(() => {
+        // Force a cache invalidation.
+        router.refresh();
+      });
     } catch (error) {
       setSaveStatus("Waiting to Save.");
       console.error(error);
