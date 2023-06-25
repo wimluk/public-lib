@@ -22,31 +22,28 @@ export default function Editor({
   const [content, setContent] = useState<PatchDocType["document"]>();
 
   async function patchRequest(publicId: string, title: string, document: any) {
-    try {
-      const response = await fetch(`/api/documents/${publicId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: title,
-          document: document,
-        }),
-      });
+    const response = await fetch(`/api/documents/${publicId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: title,
+        document: document,
+      }),
+    });
 
-      if (!response.ok) {
-        throw new Error("Failed to update document");
-      }
-
-      setSaveStatus("Saved");
-      startTransition(() => {
-        // Force a cache invalidation.
-        router.refresh();
-      });
-    } catch (error) {
+    if (!response.ok) {
       setSaveStatus("Waiting to Save.");
-      console.error(error);
+      throw new Error("Failed to update document");
     }
+
+    setSaveStatus("Saved");
+
+    startTransition(() => {
+      // Force a cache invalidation.
+      router.refresh();
+    });
   }
 
   const debouncedUpdates = useDebouncedCallback(async ({ editor }) => {
