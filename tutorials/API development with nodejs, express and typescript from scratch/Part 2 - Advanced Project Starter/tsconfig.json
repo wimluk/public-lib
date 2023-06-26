@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "ES2020",
     "pretty": true,
     "sourceMap": true,
     "declaration": true,
