@@ -1,7 +1,16 @@
 # Welcome to my public lib!
 
-This is the github repository, where I share my collection of tutorials, experiences, and insights on the technologies I use and projects I am working on.
+This is the github repository, to the article "Full Stack with Next.js 13 and the app directory" published on medium. If you want the full tutorial, go ahead and check out https://medium.com/@wimluk
 
-If you are interested in the same topics as me, you can also check out medium, where I publish articles on all kinds of topics related to web development and data science:
+## Learn More
 
-https://medium.com/@wimluk
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+
+## How do I deploy this?
+
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
