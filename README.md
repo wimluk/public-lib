@@ -1,7 +1,9 @@
-# Welcome to my public lib!
+# Express-Basic-Setup
 
-This is the github repository, where I share my collection of tutorials, experiences, and insights on the technologies I use and projects I am working on.
+This is the repo to the first part of the series “API development with nodejs, express and typescript from scratch”.
 
-If you are interested in the same topics as me, you can also check out medium, where I publish articles on all kinds of topics related to web development and data science:
-
+Check out my medium profile and have a look on all of my articles:
 https://medium.com/@wimluk
+
+Follow along on medium and check out the step by step tutorial for this repo:
+https://medium.com/@wimluk/api-development-with-nodejs-express-and-typescript-from-scratch-project-starter-85caf1508807
