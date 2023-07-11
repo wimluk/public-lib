@@ -6,4 +6,4 @@ If you are interested in the same topics as me, you can also check out medium, w
 
 https://medium.com/@wimluk
 
-Here you can find the code to my articles in the tutorials folder. If you want to use a project, clone the repository and change the branch to the specific project that you want to work on.
+Here you can find the code to my articles in the tutorials folder. If you want to use a project, you can clone the repository and change the branch to the specific project that you want to work on or clone a specific branch.
