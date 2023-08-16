@@ -11,12 +11,25 @@ const Editor: React.FC = () => {
     editorProps: Props,
     content: `
     <div data-type="rootblock">
+      <h1>H1</h1>
+    </div>
+    <div data-type="rootblock">
+      <h2>H2</h2>
+    </div>
+    <div data-type="rootblock">
+      <h3>H3</h3>
+    </div>
+    <div data-type="rootblock">
       <p>Hello, this is a custom document structure!</p>
     </div>
-`,
+  `,
   });
 
-  return <EditorContent editor={editor!} />;
+  return (
+    <div className="min-h-screen w-full">
+      <EditorContent editor={editor!} />
+    </div>
+  );
 };
 
 export default Editor;

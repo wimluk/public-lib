@@ -23,35 +23,34 @@ const RootBlockComponent: React.FC<NodeViewProps> = ({
           },
         ],
       })
-      .focus(pos + 4) // Focus on the new block (you might need to adjust the position based on your exact requirements)
+      .focus(pos + 3) // Focus on the new block (you might need to adjust the position based on your exact requirements)
       .run();
   };
 
   // Render the custom node view
   return (
-    <NodeViewWrapper as="div" className="group flex w-full gap-2">
-      {/* Container for buttons that appear on hover */}
-      <div
-        className="flex w-16 gap-1 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100"
-        aria-label="left-menu"
-        contentEditable="false"
-      >
-        {/* Button to add a new node after the current node */}
-        <button type="button" onClick={createNodeAfter} className="">
-          <PlusIcon className="h-5 w-5" />
-        </button>
-        {/* Draggable handle button to allow rearranging nodes */}
-        <button
-          contentEditable={false}
-          draggable
-          data-drag-handle
-          className="cursor-grab"
+    <NodeViewWrapper
+      as="div"
+      className="group relative mx-auto flex w-full gap-2"
+    >
+      <div className="relative mx-auto w-full max-w-4xl">
+        {/* Container for buttons that appear on hover */}
+        <div
+          className="absolute -left-12 top-5 flex w-12 gap-1 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+          aria-label="left-menu"
         >
-          <DragHandleDots2Icon className="h-5 w-5" />
-        </button>
+          {/* Button to add a new node after the current node */}
+          <button type="button" onClick={createNodeAfter} className="">
+            <PlusIcon className="h-5 w-5" />
+          </button>
+          {/* Draggable handle button to allow rearranging nodes */}
+          <button draggable data-drag-handle className="cursor-grab">
+            <DragHandleDots2Icon className="h-5 w-5" />
+          </button>
+        </div>
+        {/* Area where the node's actual content will be rendered */}
+        <NodeViewContent className="w-full" />
       </div>
-      {/* Area where the node's actual content will be rendered */}
-      <NodeViewContent className="w-full" />
     </NodeViewWrapper>
   );
 };
